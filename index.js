@@ -3,18 +3,8 @@ const ctx = canvas.getContext('2d');
 
 const w = canvas.width = document.body.offsetWidth;
 
-// const height = canvas.height = (() => {
-//   let temp = document.body.offsetWidth;
-//   if(temp >= 1500){
-//     return 1;
-//   }
-//   else if(temp < 1500 || temp >= 1400){
-//     return 5;
-//   }
-// });
 const height = (document.body.offsetHeight < 700 ? 1 : 10);
 const h = canvas.height = document.body.offsetHeight/height;
-// console.log(height);
 
 const cols = Math.floor(w / 20) + 1;
 const ypos = Array(cols).fill(0);
@@ -25,8 +15,8 @@ ctx.fillRect(0, 0, w, h);
 function matrix () {
   ctx.fillStyle = '#0001';
   ctx.fillRect(0, 0, w, h);
-  
-  ctx.fillStyle = 'rgba(0,128,128,1)';
+  const lightFontColor = 'rgba(0, 199, 199, 0.7)';
+  ctx.fillStyle = lightFontColor;
   ctx.font = '15pt monospace';
   
   ypos.forEach((y, ind) => {
@@ -50,3 +40,16 @@ ulLinks.addEventListener('click', () => {
 hamMenuIcon.addEventListener('click', () => {
   ulLinks.classList.toggle('active');
 });
+
+const colorPallets = {
+  green: {
+    fontColor: 'rgb(0, 199, 63)',
+    navColor: 'rgba(2, 72, 0, 0.6)',
+    heroText: 'rgba(0, 128, 51, 0.5)'
+  },
+  violet: {
+    fontColor: 'rgb(98, 0, 255)',
+    navColor: 'rgba(0, 72, 72, 0.6)',
+    heroText: 'rgba(0, 128, 128, 0.5)'
+  }
+}
