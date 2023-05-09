@@ -177,7 +177,7 @@ pre{
 }
 
 .four{
-    padding-top: 0           ;
+    padding-top: 0;
 }
 
 .skills-title,
@@ -274,6 +274,24 @@ pre{
 
 .about-text-div{
     width: 60vw;
+}
+
+.resume-btn{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--light-font-color);
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+.resume-btn>.resume-btn-link{
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 3apx;
+    color: #000;
 }
 
 .four p{
