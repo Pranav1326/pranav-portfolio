@@ -202,37 +202,9 @@ pre{
 
 .education-details{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 1rem;
-}
-
-.timeline{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 1rem;
-}
-
-.line{
-    border: 2px dashed rgb(0, 199, 199);
-    width: 2px;
-    height: 20vh;
-}
-
-.line-2{
-    height: 23vh;
-}
-
-.line-3{
-    height: 26vh;
-}
-
-.point{
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    border: 3px solid rgb(0, 199, 199);
 }
 
 .education-detail-1,
@@ -240,6 +212,8 @@ pre{
 .education-detail-3,
 .education-detail-4{
     border: 1px solid white;
+    width: 30rem;
+    height: auto;
     padding: 1rem 2rem;
     margin-bottom: 1rem;
     display: flex;
@@ -261,18 +235,6 @@ pre{
 .education-detail-4 h2{
     margin: 0.5rem 0;
     color: rgb(0, 199, 199);
-}
-
-.education-detail-3{
-    margin-top: 11.1rem;
-}
-
-.education-detail-2{
-    margin-top: 14rem;
-}
-
-.education-detail-4{
-    margin-top: 15.3rem;
 }
 
 .skills-title,
@@ -532,7 +494,7 @@ pre{
     .project-card h1 {
         font-size: 2.3rem;
     }
-    .two, .three, .four {
+    .two, .three {
         padding: 5rem 7rem 5rem;
     }
     .profile-mask-upper {
@@ -593,14 +555,26 @@ pre{
     .two{
         height: fit-content;
     }
+    .five{
+        padding: 5rem 7rem 0;
+    }
     .profile-mask-upper{
         display: none;
     }
-    .about-text-div {
-        width: auto;
-    }
     .about-profile-div{
         display: none;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .five{
+        padding: 5rem 6rem 0;
+    }
+}
+
+@media screen and (max-width: 690px){
+    .five{
+        padding: 5rem 5rem 0;
     }
 }
 
@@ -609,9 +583,18 @@ pre{
         padding: 0 5rem;
     }
     .two,
-    .three,
-    .four{
+    .three{
         padding: 5rem;
+    }
+    .four{
+        height: 100vh;
+        padding: 5rem;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .three{
+        padding: 3.5rem;
     }
 }
 
@@ -619,8 +602,10 @@ pre{
     .navbar{
         padding: 0 5rem;
     }
+    .three{
+        padding: 2.5rem;
+    }
     .two,
-    .three,
     .four{
         padding: 4rem;
     }
@@ -635,11 +620,16 @@ pre{
         font-weight: 900;
         font-family: 'Rubik Mono One', sans-serif;
     }
+    .project-card h1{
+        font-size: 2rem;
+    }
+    .project-card {
+        font-size: 0.8rem;
+    }
     .post-title{
         font-size: 1.5rem;
     }
     .two,
-    .three,
     .four{
         padding: 3rem;
     }
@@ -652,22 +642,13 @@ pre{
     .navbar .links .active{
         width: auto;
     }
-    .project-card h1{
-        font-size: 2rem;
-    }
-    .project-card {
-        font-size: 0.8rem;
-    }
 }
 
 @media screen and (max-width: 412px){
-    .four{
-        padding: 2rem;
-        margin-bottom: 0;
-    }  
     .two,
     .three,
-    .four{
+    .four,
+    .five{
         padding: 2rem;
     }
 }
@@ -678,7 +659,7 @@ pre{
     }
 }
 
-@media screen and (max-width: 354px){
+@media screen and (max-width: 366px){
     .sub-title{
         font-size: 1rem;
     }
@@ -689,9 +670,6 @@ pre{
     }
     .post-title{
         font-size: 1.4rem;
-    }
-    .four{
-        margin-bottom: 2rem;
     }
     .social-links-title {
         font-size: 2rem;
