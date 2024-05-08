@@ -153,6 +153,10 @@ pre{
     font-size: 1.4rem;
 }
 
+.links ul li:last-child a{
+    margin-right: 0;
+}
+
 .ham-menu{
     display: grid;
     place-items: center;
@@ -173,7 +177,8 @@ pre{
 
 .two,
 .three,
-.four{
+.four,
+.five{
     height: 70vh;
     padding: 5rem 10rem 5rem;
     width: 100%;
@@ -190,12 +195,97 @@ pre{
     padding-top: 0;
 }
 
+.five{
+    padding: 5rem 10rem 0;
+    height: 100%;
+}
+
+.education-details{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.timeline{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 1rem;
+}
+
+.line{
+    border: 2px dashed rgb(0, 199, 199);
+    width: 2px;
+    height: 20vh;
+}
+
+.line-2{
+    height: 23vh;
+}
+
+.line-3{
+    height: 26vh;
+}
+
+.point{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 3px solid rgb(0, 199, 199);
+}
+
+.education-detail-1,
+.education-detail-2,
+.education-detail-3,
+.education-detail-4{
+    border: 1px solid white;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.education-detail-1:hover,
+.education-detail-2:hover,
+.education-detail-3:hover,
+.education-detail-4:hover{
+    box-shadow: 5px 5px 1px rgb(0, 199, 199);
+    transform: translate(-0.5rem, -0.5rem);
+}
+
+.education-detail-1 h2,
+.education-detail-2 h2,
+.education-detail-3 h2,
+.education-detail-4 h2{
+    margin: 0.5rem 0;
+    color: rgb(0, 199, 199);
+}
+
+.education-detail-3{
+    margin-top: 11.1rem;
+}
+
+.education-detail-2{
+    margin-top: 14rem;
+}
+
+.education-detail-4{
+    margin-top: 15.3rem;
+}
+
 .skills-title,
 .project-title,
-.about-title{
+.about-title,
+.education-details-title{
     font-size: 3rem;
     margin: 1rem 0;
     animation: textAnimation;
+}
+
+.education-details-title{
+    margin-bottom: 2rem;
 }
 
 .skills-list{
