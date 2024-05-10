@@ -125,7 +125,9 @@ pre{
     place-items: center;
 }
 
-.footer p{
+.footer p,
+.footer p a
+{
     color: #fff;
     text-align: center;
     letter-spacing: 1px;
