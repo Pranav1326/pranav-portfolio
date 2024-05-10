@@ -334,6 +334,11 @@ pre{
     flex-direction: row;
 }
 
+.highlight{
+    color: rgb(0, 199, 199);
+    font-weight: 600;
+}
+
 .about-text-div{
     width: 60vw;
 }
