@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pranav's Portfolio</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+    <script defer src="index.js?v=2"></script>
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
 </head>
+
 <body>
     <!-- Navbar -->
     <div class="navbar" id="navbar">
@@ -17,6 +22,7 @@
             <ul class="ulLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Work</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#about">About</a></li>
@@ -29,54 +35,95 @@
     <!-- Section-1 = Hero-Section -->
     <section class="one" id="home">
         <div class="upper-mask"></div>
-        <h1 id="text"> <section class="sub-title">Hi I'm</section> <section class="main-section"> <pre><</pre>PRANAV<pre>/></pre> </section> <section class="post-title">a web-developer.</section> </h1>
+        <h1 id="text">
+            <section class="sub-title">Hi I'm</section>
+            <section class="main-section">
+                <pre><</pre>PRANAV
+                <pre>/></pre>
+            </section>
+            <section class="post-title">a Software Engineer.</section>
+        </h1>
         <canvas id='canv'></canvas>
         <div class="lower-mask"></div>
     </section>
     <!-- Section-2 = Portfolio -->
     <section class="two" id="skills">
         <h1 class="skills-title">Skills:</h1>
-        <div class="skills-list">
-            <div class="frontend-skills">
-                <h2>Frontend-</h2>
-                <p>Figma</p>
-                <p>ReactJS</p>
-                <p>Next.js</p>
-                <p>Redux</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>JavaScript</p>
-            </div>
-            <div class="backend-skills">
-                <h2>Backend-</h2>
-                <p>NodeJS</p>
-                <p>ExpressJS</p>
-                <p>JWT</p>
-                <p>Rest API</p>
-                <p>bcryptJS</p>
-                <p>mongoose</p>
-                <p>dotenv</p>
-                <p>Nodemailer</p>
-            </div>
-            <div class="database-skills">
-                <h2>Database-</h2>
-                <p>MongoDB</p>
-                <p>noSQL</p>
-                <p>SQL</p>
-                <p>MySQL</p>
-                <p>PostgreSQL</p>
-            </div>
-            <div class="other-skills">
-                <h2>Other-</h2>
-                <p>Web-Scraping</p>
-                <p>Microservices</p>
-                <p>Ubuntu</p>
-                <p>ReactNative</p>
-                <p>Postman</p>
-                <p>Heroku</p>
-                <p>Netlify</p>
-            </div>
+        <div class="skills-cloud">
+            <span class="skill-badge"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+            <span class="skill-badge"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+            <span class="skill-badge"><i class="devicon-react-original colored"></i> ReactJS</span>
+            <span class="skill-badge"><i class="devicon-nextjs-plain"></i> Next.js</span>
+            <span class="skill-badge"><i class="devicon-reactnative-original colored"></i> ReactNative</span>
+            <span class="skill-badge"><i class="devicon-expo-original"></i> Expo</span>
+            <span class="skill-badge"><i class="devicon-bun-plain"></i> Bun.js</span>
+            <span class="skill-badge"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+            <span class="skill-badge"><i class="devicon-express-original"></i> Express</span>
+            <span class="skill-badge"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+            <span class="skill-badge"><i class="devicon-html5-plain colored"></i> HTML5</span>
+            <span class="skill-badge"><i class="devicon-css3-plain colored"></i> CSS3</span>
+            <span class="skill-badge"><i class="devicon-tailwindcss-plain colored"></i> Tailwind</span>
+            <span class="skill-badge"><i class="devicon-figma-plain colored"></i> Figma</span>
+            <span class="skill-badge"><i class="devicon-redux-original colored"></i> Redux</span>
+            <span class="skill-badge"><i class="devicon-axios-plain"></i> Axios</span>
+            <span class="skill-badge"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS
+                (S3/SQS/Lightsail)</span>
+            <span class="skill-badge"><i class="devicon-mysql-plain colored"></i> MySQL</span>
+            <span class="skill-badge"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+            <span class="skill-badge"><i class="devicon-ubuntu-plain colored"></i> Ubuntu</span>
+            <span class="skill-badge"><i class="devicon-jira-plain colored"></i> Jira</span>
+            <span class="skill-badge"><i class="devicon-swagger-plain colored"></i> Swagger</span>
+            <span class="skill-badge"><i class="devicon-azure-plain colored"></i> Azure</span>
+            <span class="skill-badge"><i class="devicon-bash-plain"></i> #!/bin/bash</span>
+            <span class="skill-badge"><i class="devicon-git-plain colored"></i> Git</span>
+            <span class="skill-badge"><i class="devicon-github-plain"></i> GitHub</span>
+            <span class="skill-badge"><i class="devicon-vim-plain colored"></i> Vim</span>
+            <span class="skill-badge"><i class="devicon-homebrew-plain colored"></i> Homebrew</span>
+            <span class="skill-badge"><i class="devicon-xcode-plain colored"></i> Xcode</span>
+            <span class="skill-badge"><i class="devicon-postman-plain colored"></i> Postman</span>
+            <span class="skill-badge"><i class="devicon-rabbitmq-plain colored"></i> RabbitMQ</span>
+            <span class="skill-badge"><i class="devicon-raspberrypi-plain colored"></i> RaspberryPI</span>
         </div>
+    </section>
+    <!-- Section-Work = Work -->
+    <section class="work" id="work">
+        <h1 class="project-title" style="margin-bottom: 0;">Work:</h1>
+        <h2 class="sub-title" style="margin-top: 1rem; color: var(--light-font-color); text-align: center;">GitHub
+            Contributions</h2>
+        <div
+            style="display: flex; justify-content: center; margin-top: 2rem; padding: 1.5rem; background: rgba(0, 72, 72, 0.2); border-radius: 10px; border: 1px solid rgba(0,199,199,0.3); overflow-x: auto;">
+            <img src="https://ghchart.rshah.org/00c7c7/Pranav1326" alt="Pranav's Github Contributions"
+                style="width: 100%; min-width: 600px; max-width: 900px; filter: hue-rotate(0deg);" />
+        </div>
+        <div
+            style="display: flex; justify-content: center; margin-top: 2rem; padding: 1.5rem; background: rgba(0, 72, 72, 0.2); border-radius: 10px; border: 1px solid rgba(0,199,199,0.3); overflow-x: auto;">
+            <img src="https://github.pumbas.net/api/contributions/Pranav1326?colour=00C7C7" alt="Pranav1326's Contributions"/>
+        </div>
+        <div
+            style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-top: 2rem; padding: 1.5rem; background: rgba(0, 72, 72, 0.2); border-radius: 10px; border: 1px solid rgba(0,199,199,0.3); overflow-x: auto;">
+            <a href="https://wakatime.com/@635cb6a1-92d5-4915-a073-9d12199fe432"><img src="https://wakatime.com/badge/user/635cb6a1-92d5-4915-a073-9d12199fe432.svg" alt="Total time coded since Jan 23 2025" /></a>
+            <figure><embed src="https://wakatime.com/share/@Pranav1326/83180f69-c0c3-4f11-8078-c8d8b4eef704.svg"></embed></figure>
+        </div>
+        <!-- <figure style="margin-top: 2rem;">
+            <embed src="https://wakatime.com/share/@Pranav1326/dafdb87f-4e24-440d-ac70-84ba0deac9e6.svg"></embed>
+        </figure> -->
+        <!-- <div class="calendar">
+            Loading the data just for you.
+        </div> -->
+
+        <!-- <script>
+            GitHubCalendar(".calendar", "Pranav1326");
+
+            // or enable responsive functionality:
+            GitHubCalendar(".calendar", "Pranav1326", { responsive: true });
+
+            // Use a proxy
+            GitHubCalendar(".calendar", "Pranav1326", {
+            proxy (username) {
+                return fetch(`https://your-proxy.com/github?user=${username}`)
+            }
+            }).then(r => r.text())
+        </script> -->
     </section>
     <!-- Section-3 = Projects -->
     <section class="three" id="projects">
@@ -87,20 +134,26 @@
                 <h1>blog</h1>
                 <div class="description-div">
                     <h4>Description: </h4>
-                    <p>Blog website build on MERN Stack which support multi-users. Every authenticated user can write and mange their own blogpost and they can comment on any blog. There is also forgot password functionality validate by OTP through email.</p>
+                    <p>Blog website build on MERN Stack which support multi-users. Every authenticated user can write
+                        and mange their own blogpost and they can comment on any blog. There is also forgot password
+                        functionality validate by OTP through email.</p>
                 </div>
                 <div class="technologies-div">
                     <h4>Technologies: </h4>
-                    <p>react, node, epxress, mongoose, jwt, bcrypt, cors, axios, redux, redux-toolkit, dotenv, multer, nodemailer, body-parser</p>
+                    <p>react, node, epxress, mongoose, jwt, bcrypt, cors, axios, redux, redux-toolkit, dotenv, multer,
+                        nodemailer, body-parser</p>
                 </div>
                 <div class="links-div">
                     <h4>Live-Project: </h4>
-                    <a href="https://blog-of-pranav.netlify.app/" target="_blank">https://blog-of-pranav.netlify.app/</a>
+                    <a href="https://blog-of-pranav.netlify.app/"
+                        target="_blank">https://blog-of-pranav.netlify.app/</a>
                     <br>
                     <br>
                     <h4>Github: </h4>
-                    <a href="https://github.com/Pranav1326/blog-api" target="_blank">https://github.com/Pranav1326/blog-api</a>
-                    <a href="https://github.com/Pranav1326/blog-frontend" target="_blank">https://github.com/Pranav1326/blog-frontend</a>
+                    <a href="https://github.com/Pranav1326/blog-api"
+                        target="_blank">https://github.com/Pranav1326/blog-api</a>
+                    <a href="https://github.com/Pranav1326/blog-frontend"
+                        target="_blank">https://github.com/Pranav1326/blog-frontend</a>
                 </div>
             </div>
             <!-- Project Card -->
@@ -108,11 +161,13 @@
                 <h1>fd-center</h1>
                 <div class="description-div">
                     <h4>Description: </h4>
-                    <p>In this website user can withdraw/deposit money to/from Wallet. OTP varification is done at the time of registration of new user. Admin manages the rates.</p>
+                    <p>In this website user can withdraw/deposit money to/from Wallet. OTP varification is done at the
+                        time of registration of new user. Admin manages the rates.</p>
                 </div>
                 <div class="technologies-div">
                     <h4>Technologies: </h4>
-                    <p>react, node, epxress, mongoose, jwt, bcrypt, cors, axios, dotenv, multer, nodemailer, body-parser</p>
+                    <p>react, node, epxress, mongoose, jwt, bcrypt, cors, axios, dotenv, multer, nodemailer, body-parser
+                    </p>
                 </div>
                 <div class="links-div">
                     <!-- <h4>Live-Project: </h4>
@@ -120,8 +175,10 @@
                     <br>
                     <br> -->
                     <h4>Github: </h4>
-                    <a href="https://github.com/Pranav1326/FD-Center" target="_blank">https://github.com/Pranav1326/FD-Center</a>
-                    <a href="https://github.com/Pranav1326/fd-react-app" target="_blank">https://github.com/Pranav1326/fd-react-app</a>
+                    <a href="https://github.com/Pranav1326/FD-Center"
+                        target="_blank">https://github.com/Pranav1326/FD-Center</a>
+                    <a href="https://github.com/Pranav1326/fd-react-app"
+                        target="_blank">https://github.com/Pranav1326/fd-react-app</a>
                 </div>
             </div>
             <!-- Project Card -->
@@ -129,11 +186,13 @@
                 <h1>blog native</h1>
                 <div class="description-div">
                     <h4>Description: </h4>
-                    <p>It is blog native(mobile) application which works on cross-plateform operating systems like android and ios. It uses same api of blog website.</p>
+                    <p>It is blog native(mobile) application which works on cross-plateform operating systems like
+                        android and ios. It uses same api of blog website.</p>
                 </div>
                 <div class="technologies-div">
                     <h4>Technologies: </h4>
-                    <p>react-native, node, epxress, mongoose, jwt, bcrypt, cors, axios, dotenv, multer, nodemailer, body-parser</p>
+                    <p>react-native, node, epxress, mongoose, jwt, bcrypt, cors, axios, dotenv, multer, nodemailer,
+                        body-parser</p>
                 </div>
                 <div class="links-div">
                     <!-- <h4>Live-Project: </h4>
@@ -141,8 +200,10 @@
                     <br>
                     <br> -->
                     <h4>Github: </h4>
-                    <a href="https://github.com/Pranav1326/blog-api" target="_blank">https://github.com/Pranav1326/blog-api</a>
-                    <a href="https://github.com/Pranav1326/blog-frontend" target="_blank">https://github.com/Pranav1326/blog-frontend</a>
+                    <a href="https://github.com/Pranav1326/blog-api"
+                        target="_blank">https://github.com/Pranav1326/blog-api</a>
+                    <a href="https://github.com/Pranav1326/blog-frontend"
+                        target="_blank">https://github.com/Pranav1326/blog-frontend</a>
                 </div>
             </div>
             <!-- Project Card -->
@@ -150,19 +211,24 @@
                 <h1>stack-overflow clone</h1>
                 <div class="description-div">
                     <h4>Description: </h4>
-                    <p>This project is clone of popular dev website <a href="https://stackoverflow.com/" target="_blank">stack-overflow</a>. This project is part of Full Stack Development internship provided by Nullclass.</p>
+                    <p>This project is clone of popular dev website <a href="https://stackoverflow.com/"
+                            target="_blank">stack-overflow</a>. This project is part of Full Stack Development
+                        internship provided by Nullclass.</p>
                 </div>
                 <div class="technologies-div">
                     <h4>Technologies: </h4>
-                    <p>react, redux, redux-toolkit, node, epxress, mongoose, jwt, bcrypt, cors, axios, dotenv, body-parser</p>
+                    <p>react, redux, redux-toolkit, node, epxress, mongoose, jwt, bcrypt, cors, axios, dotenv,
+                        body-parser</p>
                 </div>
                 <div class="links-div">
                     <h4>Live-Project: </h4>
-                    <a href="https://stack-overflow-clone-pranav.netlify.app/" target="_blank">https://stack-overflow-clone-pranav.netlify.app/</a>
+                    <a href="https://stack-overflow-clone-pranav.netlify.app/"
+                        target="_blank">https://stack-overflow-clone-pranav.netlify.app/</a>
                     <br>
                     <br>
                     <h4>Github: </h4>
-                    <a href="https://github.com/Pranav1326/stack-overflow-clone-api" target="_blank">https://github.com/Pranav1326/stack-overflow-clone-api</a>
+                    <a href="https://github.com/Pranav1326/stack-overflow-clone-api"
+                        target="_blank">https://github.com/Pranav1326/stack-overflow-clone-api</a>
                 </div>
             </div>
             <!-- Project Card -->
@@ -170,7 +236,8 @@
                 <h1>simon game</h1>
                 <div class="description-div">
                     <h4>Description: </h4>
-                    <p>It is a game in which a pattern is form in each round and it gets more complex as it goes further, user have to follow the same pattern as generated along side the previous one.</p>
+                    <p>It is a game in which a pattern is form in each round and it gets more complex as it goes
+                        further, user have to follow the same pattern as generated along side the previous one.</p>
                 </div>
                 <div class="technologies-div">
                     <h4>Technologies: </h4>
@@ -178,11 +245,13 @@
                 </div>
                 <div class="links-div">
                     <h4>Live-Project: </h4>
-                    <a href="https://pranav1326.github.io/Simon-Game/" target="_blank">https://pranav1326.github.io/Simon-Game/</a>
+                    <a href="https://pranav1326.github.io/Simon-Game/"
+                        target="_blank">https://pranav1326.github.io/Simon-Game/</a>
                     <br>
                     <br>
                     <h4>Github: </h4>
-                    <a href="https://github.com/Pranav1326/Simon-Game" target="_blank">https://github.com/Pranav1326/Simon-Game</a>
+                    <a href="https://github.com/Pranav1326/Simon-Game"
+                        target="_blank">https://github.com/Pranav1326/Simon-Game</a>
                 </div>
             </div>
             <!-- Project Card -->
@@ -190,7 +259,8 @@
                 <h1>bookstore-api</h1>
                 <div class="description-div">
                     <h4>Description: </h4>
-                    <p>This project is simple bookstore api to manage the books. This includes basic operations like create-book, update-book, read-book, and delete-book.</p>
+                    <p>This project is simple bookstore api to manage the books. This includes basic operations like
+                        create-book, update-book, read-book, and delete-book.</p>
                 </div>
                 <div class="technologies-div">
                     <h4>Technologies: </h4>
@@ -202,15 +272,17 @@
                     <br>
                     <br> -->
                     <h4>Github: </h4>
-                    <a href="https://github.com/Pranav1326/BookStore" target="_blank">https://github.com/Pranav1326/BookStore</a>
+                    <a href="https://github.com/Pranav1326/BookStore"
+                        target="_blank">https://github.com/Pranav1326/BookStore</a>
                 </div>
-            </div>            
+            </div>
             <!-- Project Card -->
             <div class="project-card">
                 <h1>time tracking dashboard</h1>
                 <div class="description-div">
                     <h4>Description: </h4>
-                    <p>A small project provided by <a href="https://www.frontendmentor.io/">Frontend Mentor</a>. A dashboard in which data is shown based on given datafile of user's timing.</p>
+                    <p>A small project provided by <a href="https://www.frontendmentor.io/">Frontend Mentor</a>. A
+                        dashboard in which data is shown based on given datafile of user's timing.</p>
                 </div>
                 <div class="technologies-div">
                     <h4>Technologies: </h4>
@@ -218,11 +290,13 @@
                 </div>
                 <div class="links-div">
                     <h4>Live-Project: </h4>
-                    <a href="https://pranav1326.github.io/Time-Tracking-Dashboard-Frontend-Mentor/" target="_blank">https://pranav1326.github.io/Time-Tracking-Dashboard-Frontend-Mentor/</a>
+                    <a href="https://pranav1326.github.io/Time-Tracking-Dashboard-Frontend-Mentor/"
+                        target="_blank">https://pranav1326.github.io/Time-Tracking-Dashboard-Frontend-Mentor/</a>
                     <br>
                     <br>
                     <h4>Github: </h4>
-                    <a href="https://github.com/Pranav1326/Frontend-Mentor-Tip-Calculator/" target="_blank">https://github.com/Pranav1326/Frontend-Mentor-Tip-Calculator</a>
+                    <a href="https://github.com/Pranav1326/Frontend-Mentor-Tip-Calculator/"
+                        target="_blank">https://github.com/Pranav1326/Frontend-Mentor-Tip-Calculator</a>
                 </div>
             </div>
             <!-- Project Card -->
@@ -230,7 +304,9 @@
                 <h1>tip calculator</h1>
                 <div class="description-div">
                     <h4>Description: </h4>
-                    <p>A small project provided by <a href="https://www.frontendmentor.io/">Frontend Mentor</a>. A tip calculator programs in which we can specify total amount of bill, people in which to share and percent of tip.</p>
+                    <p>A small project provided by <a href="https://www.frontendmentor.io/">Frontend Mentor</a>. A tip
+                        calculator programs in which we can specify total amount of bill, people in which to share and
+                        percent of tip.</p>
                 </div>
                 <div class="technologies-div">
                     <h4>Technologies: </h4>
@@ -238,11 +314,13 @@
                 </div>
                 <div class="links-div">
                     <h4>Live-Project: </h4>
-                    <a href="https://pranav1326.github.io/Frontend-Mentor-Tip-Calculator/" target="_blank">https://pranav1326.github.io/Frontend-Mentor-Tip-Calculator/</a>
+                    <a href="https://pranav1326.github.io/Frontend-Mentor-Tip-Calculator/"
+                        target="_blank">https://pranav1326.github.io/Frontend-Mentor-Tip-Calculator/</a>
                     <br>
                     <br>
                     <h4>Github: </h4>
-                    <a href="https://github.com/Pranav1326/Frontend-Mentor-Tip-Calculator/" target="_blank">https://github.com/Pranav1326/Frontend-Mentor-Tip-Calculator</a>
+                    <a href="https://github.com/Pranav1326/Frontend-Mentor-Tip-Calculator/"
+                        target="_blank">https://github.com/Pranav1326/Frontend-Mentor-Tip-Calculator</a>
                 </div>
             </div>
             <!-- Project Card -->
@@ -250,7 +328,8 @@
                 <h1>nft-card</h1>
                 <div class="description-div">
                     <h4>Description: </h4>
-                    <p>A small project provided by <a href="https://www.frontendmentor.io/">Frontend Mentor</a>. A NFT-card with some great effects.</p>
+                    <p>A small project provided by <a href="https://www.frontendmentor.io/">Frontend Mentor</a>. A
+                        NFT-card with some great effects.</p>
                 </div>
                 <div class="technologies-div">
                     <h4>Technologies: </h4>
@@ -258,11 +337,13 @@
                 </div>
                 <div class="links-div">
                     <h4>Live-Project: </h4>
-                    <a href="https://pranav1326.github.io/Frontend-Mentor-NFT-Preview-Card-Component/" target="_blank">https://pranav1326.github.io/Frontend-Mentor-NFT-Preview-Card-Component/</a>
+                    <a href="https://pranav1326.github.io/Frontend-Mentor-NFT-Preview-Card-Component/"
+                        target="_blank">https://pranav1326.github.io/Frontend-Mentor-NFT-Preview-Card-Component/</a>
                     <br>
                     <br>
                     <h4>Github: </h4>
-                    <a href="https://github.com/Pranav1326/Frontend-Mentor-NFT-Preview-Card-Component/" target="_blank">https://github.com/Pranav1326/Frontend-Mentor-NFT-Preview-Card-Component</a>
+                    <a href="https://github.com/Pranav1326/Frontend-Mentor-NFT-Preview-Card-Component/"
+                        target="_blank">https://github.com/Pranav1326/Frontend-Mentor-NFT-Preview-Card-Component</a>
                 </div>
             </div>
             <!-- Project Card -->
@@ -270,7 +351,8 @@
                 <h1>word-scrumbling</h1>
                 <div class="description-div">
                     <h4>Description: </h4>
-                    <p>It is a simple game in which user have to guess the world with the scrumbled words and hint provided in specified time.</p>
+                    <p>It is a simple game in which user have to guess the world with the scrumbled words and hint
+                        provided in specified time.</p>
                 </div>
                 <div class="technologies-div">
                     <h4>Technologies: </h4>
@@ -278,14 +360,29 @@
                 </div>
                 <div class="links-div">
                     <h4>Live-Project: </h4>
-                    <a href="https://pranav1326.github.io/word-scrumbling/" target="_blank">https://pranav1326.github.io/word-scrumbling/</a>
+                    <a href="https://pranav1326.github.io/word-scrumbling/"
+                        target="_blank">https://pranav1326.github.io/word-scrumbling/</a>
                     <br>
                     <br>
                     <h4>Github: </h4>
-                    <a href="https://github.com/Pranav1326/word-scrumbling" target="_blank">https://github.com/Pranav1326/word-scrumbling</a>
+                    <a href="https://github.com/Pranav1326/word-scrumbling"
+                        target="_blank">https://github.com/Pranav1326/word-scrumbling</a>
                 </div>
             </div>
-            
+        </div>
+
+        <h1 class="project-title reveal" style="margin-top: 5rem;">Recent GitHub Activity:</h1>
+        <div class="projects-main" id="github-projects">
+            <p>Loading repositories...</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;" class="reveal">
+            <img src="https://github-readme-stats.vercel.app/api?username=Pranav1326&show_icons=true&hide_border=true&bg_color=00000000&title_color=00FFFF&text_color=FFFFFF&icon_color=00FFFF"
+                alt="GitHub Stats" style="width: 100%; max-width: 450px;" />
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Pranav1326&layout=compact&hide_border=true&bg_color=00000000&title_color=00FFFF&text_color=FFFFFF"
+                alt="Top Languages" style="width: 100%; max-width: 350px;" />
+            <img src="https://github-readme-stats.vercel.app/api/wakatime?username=Pranav1326&hide_border=true&bg_color=00000000&title_color=00FFFF&text_color=FFFFFF"
+                alt="WakaTime Stats" style="width: 100%; max-width: 450px;" />
         </div>
     </section>
     <!-- Section-5 = Education -->
@@ -325,37 +422,46 @@
     <section class="four" id="about">
         <h1 class="about-title">About:</h1>
         <div class="about-sub-section">
-            <div class="about-text-div">
+            <!-- Glassmorphic Summary Card -->
+            <div class="about-text-div glass-card">
                 <p class="about-text">Hello! <span class="highlight">I'm Pranav Visavadia.</span></p>
-                <p class="about-text-sub">Welcome to my portfolio! As a passionate and dedicated aspiring <span class="highlight">full-stack developer</span> from India, I specialize in the <span class="highlight">MERN stack (MongoDB, Express.js, React.js, Node.js).</span> I hold a Bachelor of Computer Application degree and am currently pursuing a Master of Computer Application, fine-tuning my expertise to become a frontrunner in the tech industry.</p>
+                <p class="about-text-sub">Welcome to my portfolio! I'm a passionate <span class="highlight">Full-Stack
+                        Developer</span> specializing in building dynamic, high-performance web applications with the
+                    <span class="highlight">MERN stack</span>. Currently pursuing my Master of Computer Application, I
+                    combine a strong academic foundation with practical expertise in modern technologies like React,
+                    Node.js, TypeScript, and Next.js. I thrive on turning complex problems into elegant, user-centric
+                    digital experiences.
+                </p>
+
                 <h1 class="social-links-title">Social Links: </h1>
-                <a href="https://github.com/pranav1326" target="_blank">
-                    <img src="./images/github-mark-white.png" class="github-logo" alt="">
-                </a>
-                <a href="https://www.linkedin.com/in/pranav-visavadia/" target="_blank">
-                    <img src="./images/linkedin.png" alt="">
-                </a>
-                <a href="mailto:visavadiapa@gmail.com" target="_blank">
-                    <img src="./images/email.png" alt="">
-                </a>
-                <a href="https://wa.me/+917984863441?text=Hi, I've visited your Portfolio website. Let's connect" target="_blank">
-                    <img src="./images/whatsapp.png" alt="">
-                </a>
-                <a href="https://www.instagram.com/v.pranav1326/" target="_blank">
-                    <img src="./images/instagram.png" alt="">
-                </a>
-                <a href="https://in.pinterest.com/visavadiapranav/" class="pinterest-logo" target="_blank">
-                    <img src="./images/pinterest.png" alt="">
-                </a>
-                <button class="resume-btn">
-                    <!-- <a class="resume-btn-link" href="https://www.canva.com/design/DAFJq_82oLM/Y3iw9KOFgtPVnSRF8DnCpQ/view?utm_content=DAFJq_82oLM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#1" target="_blank"> Resume </a> -->
-                    <a class="resume-btn-link" href="https://app.enhancv.com/share/647b7694/?utm_medium=growth&utm_campaign=share-resume&utm_source=dynamic" target="_blank"> Resume </a>
-                </button>
+                <div class="social-links-container">
+                    <a href="https://github.com/pranav1326" target="_blank" class="social-badge">
+                        <img src="./images/github-mark-white.png" class="github-logo" alt="GitHub">
+                    </a>
+                    <a href="https://www.linkedin.com/in/pranav-visavadia/" target="_blank" class="social-badge">
+                        <img src="./images/linkedin.png" alt="LinkedIn">
+                    </a>
+                    <a href="mailto:visavadiapa@gmail.com" target="_blank" class="social-badge">
+                        <img src="./images/email.png" alt="Email">
+                    </a>
+                    <a href="https://wa.me/+917984863441?text=Hi, I've visited your Portfolio website. Let's connect"
+                        target="_blank" class="social-badge">
+                        <img src="./images/whatsapp.png" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.instagram.com/v.pranav1326/" target="_blank" class="social-badge">
+                        <img src="./images/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="https://in.pinterest.com/visavadiapranav/" class="pinterest-logo social-badge"
+                        target="_blank">
+                        <img src="./images/pinterest.png" alt="Pinterest">
+                    </a>
+                </div>
             </div>
+
+            <!-- Morphing Liquid Blob Profile Picture -->
             <div class="about-profile-div">
-                <div class="profile-mask">
-                    <div class="profile-mask-upper"></div>
-                    <!-- <img src="./images/profile.jpg" class="profile-img" alt="" /> -->
+                <div class="blob-profile-container">
+                    <img src="./images/profile.jpg" class="blob-profile" alt="Pranav Profile Picture">
                 </div>
             </div>
         </div>
@@ -366,4 +472,5 @@
     </div>
 </body>
 <!-- credit-of-matrix-effect: https://codepen.io/gnsp/pen/vYBQZJm  -->
+
 </html>
